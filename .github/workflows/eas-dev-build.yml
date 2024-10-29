@@ -51,11 +51,11 @@ jobs:
       - name: Create GoogleService-Info.plist
         working-directory: ./app
         run: |
-          echo ${{ secrets.GOOGLE_SERVICE_INFO_CONTENT }} | base64 --decode > GoogleService-Info.plist
+          echo ${{ secrets.GOOGLE_SERVICE_INFO_CONTENT }} | base64 --decode > ./GoogleService-Info.plist
       - name: Create google-services.json
         working-directory: ./app
         run: |
-          echo ${{ secrets.GOOGLE_SERVICE_JSON_CONTENT }} | base64 --decode > google-services.json
+          echo ${{ secrets.GOOGLE_SERVICE_JSON_CONTENT }} | base64 --decode > ./google-services.json
       - name: Install dependencies
         working-directory: ./app
         run: npm install
