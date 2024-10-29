@@ -11,11 +11,6 @@ name: "CI: Biome JS | Flows"
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
     paths:
       - flows/**
 

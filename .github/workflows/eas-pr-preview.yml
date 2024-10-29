@@ -10,11 +10,11 @@
 name: "CI: EAS Build PR Preview"
 
 on:
-  pull_request:
-    branches:
-      - main
+  push:
     paths:
       - app/**
+    branches-ignore:
+      - main
 
 permissions:
   contents: read
@@ -50,7 +50,7 @@ jobs:
       - name: Build PR Preview
         uses: expo/expo-github-action/preview@v8
         with:
-          command: eas update --auto --branch ${{ github.event.pull_request.head.ref }}
+          command: eas update --auto --branch ${{ github.ref_name }}
           working-directory: app
           comment: true
           comment-id: eas-pr-preview

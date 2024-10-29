@@ -11,11 +11,6 @@ name: "CI: Biome JS | Functions"
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
     paths:
       - functions/**
 
