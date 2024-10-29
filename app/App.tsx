@@ -12,7 +12,7 @@ import './global.css'; // Import Tailwind CSS styles for NativeWind functionalit
 export const App: React.FC = () => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text>Hello Mumbi!</Text>
+      <Text>Hello World!</Text>
     </View>
   );
 };
