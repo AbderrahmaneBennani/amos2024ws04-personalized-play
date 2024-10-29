@@ -10,11 +10,12 @@
 name: "CI: EAS Build PR Preview"
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
     paths:
       - app/**
-    branches-ignore:
-      - main
 
 permissions:
   contents: read
